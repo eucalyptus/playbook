@@ -30,3 +30,7 @@ deprecation_warnings=False
 You will definately need this too, for now:
 
 error_on_undefined_vars = False
+
+You might also want to consider (if you rebuild a lot):
+
+#host_key_checking = False <- and uncommenting it
