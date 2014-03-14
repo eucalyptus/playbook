@@ -1,0 +1,15 @@
+# Sample inventory file for your cloud deployment via Ansible
+[clc]
+odc-f-13.prc.eucalyptus-systems.com
+
+[walrus]
+odc-f-13.prc.eucalyptus-systems.com
+
+[cc]
+odc-f-13.prc.eucalyptus-systems.com
+
+[sc]
+odc-f-13.prc.eucalyptus-systems.com
+
+[nc]
+odc-f-13.prc.eucalyptus-systems.com
