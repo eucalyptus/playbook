@@ -7,35 +7,21 @@ The first playbook "dev-test-large" aims to deploy Eucalyptus in a distributed s
 
 http://www.eucalyptus.com/eucalyptus-cloud/reference-architectures/dev-test-large  (minus SAN).
 
-All of these playbooks assume you have an inventory file configured.  Regarding NC's and networking mode, this playbook will create a bridge on a specific interface. It assumes you have an ansible inventory file which looks like this:
-
-[clc]
-<myclcip>
-
-[walrus]
-<mywalrusip>
-
-[cc]
-<myclusterip>
-
-[sc]
-<mystorageip>
-
-[nc]
-<mync1>
-<mync2>
+These are inventory files, you need to subtitutes the example hostnames with your real system hostnames for each component.
 
 You would then run the playbook with (for example):
 
-# ansible-playbook -i dev-test-large-hosts site.yml -u root -k
+ansible-playbook -i dev-test-large-hosts site.yml -u root -k
 
 Add additional options for sudo, ssh key etc. as required.
 
-** PLAYBOOK CONFIG **
+playbook configuration
+========
 
 Note that variables for the installation should be configured in vars/main.yml.  Here you can change the software version, network settings etc.
 
-** ANSIBLE CONFIGURATION **
+ansible configuration
+========
 
 I've not yet removed all of the deprecated variable definitions, you might want to set this parameter in /etc/ansible/ansible.cfg to remove warnings:
 
