@@ -1,0 +1,15 @@
+# Sample inventory file for your cloud deployment via Ansible
+[clc]
+myciabhost
+
+[walrus]
+myciabhost
+
+[cc]
+myciabhost
+
+[sc]
+myciabhost
+
+[nc]
+myciabhost
