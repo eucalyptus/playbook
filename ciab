@@ -1,15 +1,15 @@
 # Sample inventory file for your cloud deployment via Ansible
 [clc]
-odc-f-13.prc.eucalyptus-systems.com
+myciabhost
 
 [walrus]
-odc-f-13.prc.eucalyptus-systems.com
+myciabhost
 
 [cc]
-odc-f-13.prc.eucalyptus-systems.com
+myciabhost
 
 [sc]
-odc-f-13.prc.eucalyptus-systems.com
+myciabhost
 
 [nc]
-odc-f-13.prc.eucalyptus-systems.com
+myciabhost
