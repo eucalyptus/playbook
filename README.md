@@ -31,6 +31,6 @@ You will definately need this too, for now:
 
 error_on_undefined_vars = False
 
-You might also want to consider (if you rebuild a lot):
+You might also want to consider (if you rebuild a lot) disabling host key checking by enabling the line:
 
-#host_key_checking = False <- and uncommenting it
+host_key_checking = False
