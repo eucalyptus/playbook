@@ -7,7 +7,7 @@
 
     - name: Register Walrus
       action: command /usr/sbin/euca_conf --no-scp --no-rsync --no-sync --register-walrus --partition walrus --host ${hostvars.{$item}.ansible_$vnet_pub.ipv4.address} --component walrus-${hostvars.{$item}.ansible_hostname}
-      with_items: ${groups.walrus[0]}
+      with_items: ${groups.walrus[0]} 
       when: walrus_return.rc|int == 1
 
     - name: Check for SC
@@ -62,6 +62,10 @@
     - name: Install default ELB image
       action: shell source /root/admin-creds/eucarc && euca-install-load-balancer --install-default
       when: result.changed
+
+    - name: Wait for SC
+      wait_for: host=${hostvars.{$item}.ansible_$vnet_pub.ipv4.address} port=8773 delay=20
+      with_items: ${groups.sc[0]}
 
     - name: Set block storage manager
       action: shell source /root/admin-creds/eucarc && euca-modify-property -p {{ partition_name }}.storage.blockstoragemanager={{ storbackend }}

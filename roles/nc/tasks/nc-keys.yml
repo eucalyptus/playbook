@@ -6,3 +6,5 @@
   - cluster-cert.pem
   - cluster-pk.pem
   - cloud-cert.pem
+  notify:
+  - restart nc
