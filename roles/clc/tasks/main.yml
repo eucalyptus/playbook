@@ -20,8 +20,7 @@
     - name: Initialize the database
       action: command /usr/sbin/euca_conf --initialize creates=/var/lib/eucalyptus/keys/euca.p12  
       when: installed_release.changed or installed_nightly.changed
-      notify: 
-      - restart eucalyptus cloud
+      notify: restart eucalyptus cloud
 
     # Wait for services to come up 
     - name: Waiting for CLC services
