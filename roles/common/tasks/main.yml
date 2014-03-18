@@ -49,6 +49,6 @@
 
   - name: Disable firewall (unless its a CC)
     service: name=iptables enabled=no state=stopped
-    when: ccreturn.rc|int == "1"
+    when: ccreturn.rc|int == 1
     tags:
     - firewall
