@@ -23,6 +23,13 @@
     - common
     - cc
     
+- hosts: clc
+  vars_files:
+    - vars/main.yml
+  roles:
+    - common
+    - clc
+
 - hosts: sc
   vars_files:
     - vars/main.yml
@@ -36,31 +43,30 @@
   roles:
     - common
     - walrus
- 
-- hosts: clc
-  vars_files:
-    - vars/main.yml
-  roles:
-    - common
-    - clc
 
 - hosts: walrus
   vars_files:
     - vars/main.yml
   tasks:
   - include: roles/walrus/tasks/walrus-keys.yml
+  handlers:
+  - include: roles/walrus/handlers/main.yml
 
 - hosts: sc
   vars_files:
     - vars/main.yml
   tasks:
   - include: roles/sc/tasks/sc-keys.yml
+  handlers:
+  - include: roles/sc/handlers/main.yml
 
 - hosts: clc
   vars_files:
     - vars/main.yml
   tasks:
   - include: roles/clc/tasks/component-reg.yml
+  handlers:
+  - include: roles/clc/handlers/main.yml
 
 - hosts: cc
   vars_files:
@@ -72,9 +78,11 @@
   vars_files:
     - vars/main.yml
   tasks:
-  - include: roles/nc/tasks/nc-keys.yml 
+  - include: roles/nc/tasks/nc-keys.yml
+  handlers:
+  - include: roles/nc/handlers/main.yml
 
-- hosts: sc
-  post_tasks:
-    - action: service name=eucalyptus-cloud state=restarted
+# - hosts: sc
+#  post_tasks:
+#    - action: service name=eucalyptus-cloud state=restarted
     

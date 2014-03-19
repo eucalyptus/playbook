@@ -5,3 +5,5 @@
   - cloud-pk.pem
   - euca.p12
   when: not inventory_hostname in groups.clc
+  notify:
+  - restart eucalyptus cloud

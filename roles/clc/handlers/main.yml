@@ -1,2 +1,3 @@
+---
 - name: restart eucalyptus cloud
   service: name=eucalyptus-cloud state=restarted

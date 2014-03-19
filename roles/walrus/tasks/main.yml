@@ -13,3 +13,6 @@
       action: template src=../../common/templates/eucalyptus.conf.j2 dest=/etc/eucalyptus/eucalyptus.conf
       notify: 
       - restart eucalyptus cloud
+
+    - name: Start Walrus
+      service: name=eucalyptus-cloud state=started
