@@ -9,15 +9,15 @@ Note that variables for the installation should be configured in `vars/main.yml`
 
 Some variable definitions are deprecated so you might want to set this parameter in /etc/ansible/ansible.cfg to remove warnings:
  
-deprecation_warnings=False
+`deprecation_warnings=False`
 
 ... and due to this legacy syntax this playbook does not work with 1.6-devel (i.e. from checkout). You will definately need this too, for now:
 
-error_on_undefined_vars = False
+`error_on_undefined_vars = False`
 
 You might also want to consider (if you rebuild a lot) disabling host key checking by enabling the line:
 
-host_key_checking = False
+`host_key_checking = False`
 
 ## Getting Started
 
