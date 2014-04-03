@@ -44,7 +44,7 @@ Test by making sure you can reach your hosts, using the ping module.
 
 ```bash
 # ansible clc:walrus:sc:cc:nc -m ping
-[root@ecc-frontend-0 ~]# ansible cc:nc -m ping
+# ansible cc:nc -m ping
 192.168.249.65 | success >> {
     "changed": false, 
     "ping": "pong"
