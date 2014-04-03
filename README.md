@@ -1,11 +1,11 @@
-Eucalyptus 3.x Deployment Playbook
+Eucalyptus Playbook
 ========
 
 This is a playbook for deploying Eucalyptus via packages in accordance with reference Architectures. Depends on ansible 1.3 or above. There are a number of inventory files which aim to mimic the topology of Eucalyptus per the reference architectures found here: http://www.eucalyptus.com/eucalyptus-cloud/reference-architectures/dev-test-large  (minus SAN).
 
 ## Configuration
 
-Note that variables for the installation should be configured in vars/main.yml.  Here you can change the software version, network settings etc.
+Note that variables for the installation should be configured in `vars/main.yml`.  Here you can change the software version, network settings etc.
 
 Some variable definitions are deprecated so you might want to set this parameter in /etc/ansible/ansible.cfg to remove warnings:
  
